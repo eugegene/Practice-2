@@ -48,7 +48,7 @@ namespace Practice_Linq
         {
             //Query 1: Вивести всі матчі, які відбулися в Україні у 2012 році.
 
-            var selectedGames = games.Where(u=>u.Country=="Ukraine"&&u.Date.Year==2012); // Корегуємо запит !!!
+            var selectedGames = games.Where(u => u.Country == "Ukraine" && u.Date.Year == 2012); // Корегуємо запит !!!
 
             // Перевірка
             Console.WriteLine("\n======================== QUERY 1 ========================");
@@ -66,12 +66,15 @@ namespace Practice_Linq
         {
             //Query 2: Вивести Friendly матчі збірної Італії, які вона провела з 2020 року.  
 
-            var selectedGames = games; // Корегуємо запит !!!
+            var selectedGames = games.Where(u => u.Tournament == "Friendly" && u.Date.Year >= 2020 && (u.Home_team == "Italy" || u.Away_team == "Italy")); // Корегуємо запит !!!
 
 
             // Перевірка
             Console.WriteLine("\n======================== QUERY 2 ========================");
-
+            foreach (var game in selectedGames)
+            {
+                Console.WriteLine($"{game.Date.ToString("d")}, {game.Home_team} - {game.Away_team}, Score: {game.Home_score} - {game.Away_score}, Country: {game.Country}");
+            }
             // див. приклад як має бути виведено:
 
 
