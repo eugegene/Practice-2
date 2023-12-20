@@ -1,4 +1,4 @@
-![image](https://github.com/eugegene/Practice-2/assets/148196803/4f6e3365-9e3c-4f6f-a1ff-c49cbfdac97c)# Практична робота №2
+# Практична робота №2
 ## На тему LINQ
 
 
